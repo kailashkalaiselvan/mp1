@@ -1,13 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive single-page developer portfolio built with HTML, SCSS, and vanilla JavaScript.">
+  <meta name="theme-color" content="#000000">
+  <title>Kailash Kalaiselvan | CS409 MP1</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" id="navbar" aria-label="Primary navigation">
+      <div class="container navbar__inner">
+        <a class="navbar__brand" href="#home" aria-label="Kailash Kalaiselvan home">KK</a>
+
+        <button class="navbar__toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <div class="navbar__links" id="navLinks">
+          <a class="nav-link is-active" href="#home">Home</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#story">Story</a>
+          <a class="nav-link" href="#media">Video</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Software Developer • AI • Cloud</p>
+          <h1>Kailash Kalaiselvan</h1>
+          <p class="hero__lead">
+            Computer science student at the University of Illinois Urbana-Champaign. I enjoy building software that combines,
+            strong user experience, and modern technology.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">Explore Projects</a>
+            <a class="button button--ghost" href="#contact">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">My work</p>
+          <h2>Projects</h2>
+          <p>Use the arrows to explore a few example projects.</p>
+        </div>
+
+        <div class="carousel reveal" aria-label="Project carousel">
+          <button class="carousel__arrow carousel__arrow--prev" id="prevSlide" type="button" aria-label="Previous project">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+
+          <div class="carousel__viewport">
+            <article class="slide is-active" data-slide="0">
+              <div class="slide__number">01 / 03</div>
+              <div class="slide__icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+              <h3>Faav</h3>
+              <p>A social discovery app for saving favorites and sharing recommendations with friends.</p>
+              <div class="tag-list">
+                <span>Flutter</span><span>Firebase</span><span>Python</span>
+              </div>
+              <button class="text-button modal-open" type="button" data-project="faav">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </article>
+
+            <article class="slide" data-slide="1">
+              <div class="slide__number">02 / 03</div>
+              <div class="slide__icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+              <h3>Global News Dashboard</h3>
+              <p>A cloud-hosted news platform with search, translation, summarization, and containerized services.</p>
+              <div class="tag-list">
+                <span>Node.js</span><span>PostgreSQL</span><span>Azure</span>
+              </div>
+              <button class="text-button modal-open" type="button" data-project="news">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </article>
+
+            <article class="slide" data-slide="2">
+              <div class="slide__number">03 / 03</div>
+              <div class="slide__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+              <h3>Bid2Buy</h3>
+              <p>A command-line auction application focused on clear object-oriented design and efficient data handling.</p>
+              <div class="tag-list">
+                <span>C++</span><span>OOP</span><span>CLI</span>
+              </div>
+              <button class="text-button modal-open" type="button" data-project="bid2buy">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </article>
+          </div>
+
+          <button class="carousel__arrow carousel__arrow--next" id="nextSlide" type="button" aria-label="Next project">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+
+          <div class="carousel__dots" aria-label="Choose project slide">
+            <button class="carousel__dot is-active" type="button" data-slide-to="0" aria-label="Show slide 1"></button>
+            <button class="carousel__dot" type="button" data-slide-to="1" aria-label="Show slide 2"></button>
+            <button class="carousel__dot" type="button" data-slide-to="2" aria-label="Show slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">My Interests</p>
+          <h2>Skills & Focus</h2>
+          <p>Three disciplines for multi-column layout.</p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card reveal">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <h3>Software</h3>
+            <p>JavaScript, C++, Python, Go, Git, APIs, testing, and object-oriented design.</p>
+          </article>
+          <article class="skill-card reveal">
+            <i class="fa-solid fa-brain" aria-hidden="true"></i>
+            <h3>AI & Data</h3>
+            <p>Machine learning, recommendation systems, data processing, model-assisted applications, and analytics.</p>
+          </article>
+          <article class="skill-card reveal">
+            <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+            <h3>Cloud</h3>
+            <p>Docker, Azure, Firebase, databases, service-oriented systems, deployment, and cloud architecture.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story" id="story">
+      <div class="container story__inner">
+        <div class="story__content reveal">
+          <p class="eyebrow">Goal</p>
+          <h2>The Motivation</h2>
+          <p>
+            Good software should feel straightforward to the person using it. I enjoy taking complex
+            ideas, breaking them into manageable systems, and turning them into experiences that are fast,
+            readable, and easy to use.
+          </p>
+          <p>
+            This section uses a fixed-position background image so the content stays readable while the
+            background remains visually anchored during scrolling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="media">
+      <div class="container media-layout">
+        <div class="media-copy reveal">
+          <p class="eyebrow">HTML5 media</p>
+          <h2>Video showcase</h2>
+          <p>
+            The video element is native HTML5. Local mp4 embedded
+          </p>
+        </div>
+        <div class="video-card reveal">
+          <video controls preload="metadata">
+            <source src="assets/mp1video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact__inner reveal">
+        <div>
+          <p class="eyebrow">Let’s connect</p>
+          <h2>Let's Collaborate!</h2>
+          <p>Open the modal to see contact details and a few ways to reach me.</p>
+        </div>
+        <button class="button button--primary modal-open" type="button" data-project="contact">Open Contact</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Kailash Kalaiselvan</p>
+      <div class="socials" aria-label="Social media links">
+        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close modal">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <p class="eyebrow">More information</p>
+      <h2 id="modalTitle">Project details</h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+</body>
 </html>
